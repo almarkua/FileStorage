@@ -1,0 +1,9 @@
+﻿@model IEnumerable<FileStorage.Domain.Category>
+
+<ul>
+    @foreach (var category in @Model) {
+        <li>
+            @Html.ActionLink(category.Name, "List", "File", new { categoryId = category.CategoryId }, null);
+        </li>
+    }
+</ul>

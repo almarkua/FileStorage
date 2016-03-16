@@ -1,0 +1,39 @@
+﻿@model FileStorage.Models.SpaceViewModel
+
+@{
+    Layout = null;
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalSpace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalSpace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UsedSpace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UsedSpace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeSpace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeSpace)
+        </dd>
+    </dl>
+</div>
+
+<div class="progress">
+    <span class="progress-bar" role="progressbar"  style="width: @Model.UsedSpacePercent%; min-width: 1.5em;">
+        @Model.Progress
+    </span> 
+</div>
