@@ -23,7 +23,7 @@ namespace FileStorage.Controllers
         [ChildActionOnly]
         public ActionResult AllChild()
         {
-            return PartialView(CurrentUser.Categories.GetEnumerator());
+            return PartialView(CurrentUser.Categories.ToArray());
         }
 
         [HttpGet]
